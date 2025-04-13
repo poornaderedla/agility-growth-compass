@@ -1,3 +1,4 @@
+
 import React, { createContext, useContext, useState, ReactNode } from 'react';
 
 // Define types
@@ -97,7 +98,7 @@ const sampleAssessmentQuestions: Question[] = [
   {
     id: 'assess-1',
     type: 'situational',
-    question: 'Your team adopts a new cloud tool with poor documentation. What's your first step?',
+    question: 'Your team adopts a new cloud tool with poor documentation. What\'s your first step?',
     options: [
       'Trial-and-error until I figure it out',
       'Find a mentor or colleague who has used it before',
