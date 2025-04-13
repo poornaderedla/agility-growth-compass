@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -25,12 +26,22 @@ export default {
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
 				primary: {
-					DEFAULT: 'hsl(var(--primary))',
-					foreground: 'hsl(var(--primary-foreground))'
+					DEFAULT: '#4CAF50',
+					light: '#81C784',
+					dark: '#2E7D32',
+					foreground: '#FFFFFF'
 				},
 				secondary: {
-					DEFAULT: 'hsl(var(--secondary))',
-					foreground: 'hsl(var(--secondary-foreground))'
+					DEFAULT: '#26A69A',
+					light: '#80CBC4',
+					dark: '#00796B',
+					foreground: '#FFFFFF'
+				},
+				neutral: {
+					DEFAULT: '#9E9E9E',
+					light: '#F5F5F5',
+					dark: '#616161',
+					foreground: '#212121'
 				},
 				destructive: {
 					DEFAULT: 'hsl(var(--destructive))',
@@ -41,8 +52,10 @@ export default {
 					foreground: 'hsl(var(--muted-foreground))'
 				},
 				accent: {
-					DEFAULT: 'hsl(var(--accent))',
-					foreground: 'hsl(var(--accent-foreground))'
+					DEFAULT: '#FFA726',
+					light: '#FFD95B',
+					dark: '#E65100',
+					foreground: '#212121'
 				},
 				popover: {
 					DEFAULT: 'hsl(var(--popover))',
@@ -63,6 +76,10 @@ export default {
 					ring: 'hsl(var(--sidebar-ring))'
 				}
 			},
+			fontFamily: {
+				nunito: ['Nunito', 'sans-serif'],
+				fira: ['Fira Code', 'monospace']
+			},
 			borderRadius: {
 				lg: 'var(--radius)',
 				md: 'calc(var(--radius) - 2px)',
@@ -70,25 +87,41 @@ export default {
 			},
 			keyframes: {
 				'accordion-down': {
-					from: {
-						height: '0'
-					},
-					to: {
-						height: 'var(--radix-accordion-content-height)'
-					}
+					from: { height: '0' },
+					to: { height: 'var(--radix-accordion-content-height)' }
 				},
 				'accordion-up': {
-					from: {
-						height: 'var(--radix-accordion-content-height)'
-					},
-					to: {
-						height: '0'
-					}
+					from: { height: 'var(--radix-accordion-content-height)' },
+					to: { height: '0' }
+				},
+				'fade-in': {
+					'0%': { opacity: '0' },
+					'100%': { opacity: '1' }
+				},
+				'slide-up': {
+					'0%': { transform: 'translateY(20px)', opacity: '0' },
+					'100%': { transform: 'translateY(0)', opacity: '1' }
+				},
+				'typing': {
+					'0%': { width: '0' },
+					'100%': { width: '100%' }
+				},
+				'blink': {
+					'50%': { borderColor: 'transparent' }
+				},
+				'progress': {
+					'0%': { width: '0%' },
+					'100%': { width: '100%' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'fade-in': 'fade-in 0.5s ease-out',
+				'slide-up': 'slide-up 0.5s ease-out',
+				'typing': 'typing 3.5s steps(40, end)',
+				'blink': 'blink 1s step-end infinite',
+				'progress': 'progress 0.5s ease-out'
 			}
 		}
 	},
